@@ -1,4 +1,12 @@
-default['yaprt-repo-server']['git-repo'] = "https://github.com/cloudnull/yaprt.git"
+default['yaprt-repo-server']['report-filename'] = "repo-server-report.json"
+default['yaprt-repo-server']['repos-filename'] = "repo-server-repos-file.txt"
+
+# The git repos yaprt will buld the python wheels from
+default['yaprt-repo-server']['git_repos'] = %w(
+  git+https://github.com/elextro/osprofiler@master
+)
+
+default['yaprt-repo-server']['yaprt-git-repo'] = "https://github.com/cloudnull/yaprt.git"
 default['yaprt-repo-server']['repo-service-home-folder'] = '/var/www'
 default['yaprt-repo-server']['repo-service-user-name'] = 'nginx'
 default['yaprt-repo-server']['repo_service_group_name'] = 'www-data'
@@ -28,4 +36,5 @@ default['yaprt-repo-server']['apt-packages'] = %w(
 )
 
 
-
+#Pip settings
+default['yaprt-repo-server']['get-pip-url'] = "https://bootstrap.pypa.io/get-pip.py"

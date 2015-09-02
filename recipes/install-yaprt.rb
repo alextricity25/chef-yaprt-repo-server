@@ -2,7 +2,7 @@
 #Cloning the yaprt source code
 git 'Clone yaprt repo' do
   destination "/opt/yaprt/"
-  repository node['yaprt-repo-server']['git-repo']
+  repository node['yaprt-repo-server']['yaprt-git-repo']
   action :sync
 end
 
